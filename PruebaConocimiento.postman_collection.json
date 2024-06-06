@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "0cb406fc-de65-4a93-a2d7-069aaba5ea40",
+		"name": "PruebaConocimiento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32234423"
+	},
+	"item": [
+		{
+			"name": "Estudiantes",
+			"item": [
+				{
+					"name": "Busca todos los estudiantes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5024/api/estudiantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"estudiantes"
+							]
+						},
+						"description": "Endpoint que permite buscar todos los estudiantes"
+					},
+					"response": []
+				},
+				{
+					"name": "Busca estudiante por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/estudiante/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"estudiante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crea un estudiante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \n  \"nombre\": \"Alejandro Lopez\",\n  \"fechaNacimiento\": \"1997-06-06\",\n  \"direccion\": \"Segovia\",\n  \"correo\": \"santiago@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5024/api/CrearEstudiante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"CrearEstudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualiza un estudiante",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":5,\n  \"nombre\": \"Santiago Lopez\",\n  \"fechaNacimiento\": \"1995-06-06\",\n  \"direccion\": \"Remedios\",\n  \"correo\": \"santiago123@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5024/ActualizarEstudiante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"ActualizarEstudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca estudiante por fecha de nacimiento",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta donde guardo todos los endpoint de estudiantes"
+		},
+		{
+			"name": "Profesores",
+			"item": [
+				{
+					"name": "Busca todos los profesores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/profesores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"profesores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca profesor por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/profesor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"profesor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crea un profesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/CrearProfesor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"CrearProfesor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualiza un profesor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/ActualizarProfesor/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"ActualizarProfesor",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta donde guardo todos los endpoint de profesores"
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "Busca todos los cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/cursos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca curso por id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Busca todos los cursos asociados a un profesor",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Crea un curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/CrearCurso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"CrearCurso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualiza un curso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/ActualizarCurso/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"ActualizarCurso",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta donde guardo todos los endpoint de cursos"
+		},
+		{
+			"name": "Matriculas",
+			"item": [
+				{
+					"name": "Busca todas las matriculas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/matriculas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"matriculas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca matricula por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/matricula/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"matricula",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca matricula por fecha",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/matriculas/fecha/2024-08-08",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"matriculas",
+								"fecha",
+								"2024-08-08"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca matriculas asociadas a un id de estudiante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/api/estudiante/1/matriculas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"api",
+								"estudiante",
+								"1",
+								"matriculas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crea una matricula",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/CrearMatricula",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"CrearMatricula"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualiza una matricula",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/ActualizarMatricula/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"ActualizarMatricula",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta donde guardo todos los endpoint de matriculas"
+		}
+	]
+}
